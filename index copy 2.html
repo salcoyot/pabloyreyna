@@ -24,6 +24,7 @@
             background-position:center;
             /*background-size:cover;*/
         }
+
     
         .parallax-image-50 {
             height:200%;
@@ -65,6 +66,9 @@
         .content-full {
             height:100%;
         }
+        .card{
+          margin-bottom: 10px;
+        }
     
         #done {
             height:100%;
@@ -90,6 +94,18 @@
             width: 100%;
           }
         }
+        @media only screen and (max-width: 600px) {
+          .card-img-bottom{
+            height:150px;
+            width: auto;
+            background-color:#FFFFFF;
+            
+            overflow: hidden;
+          }
+          .text-info{
+            font-size: 70%;
+          }
+        }
   
     </style>
     <body>
@@ -101,16 +117,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#">Inicio </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Sobre nosotros</a>
+                  <a class="nav-link" href="#parallax1">Sobre nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hospedaje</a>
+                    <a class="nav-link" href="#hospedaje">Hospedaje</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Agenda</a>
+                  <a class="nav-link" href="#agenda">Agenda</a>
                 </li>
               
                 <li class="nav-item">
@@ -119,13 +135,18 @@
                 <li class="nav-item">
                   <a class="nav-link disabled" href="#">Mesa de regalos</a>
                 </li>
+                
    
               </ul>
+              <div class="offset-md-2 col-md-3 text-info"> <h3><b>Invitados 20/120</b></h3></div>
             </div>
         </nav>
     <div class="spacer s0"></div>
-    <div id="parallax4" class="parallaxParent">
+    <div id="parallax4" class="parallaxParent container">
         <div class="parallax-image" style="background-image: url(img/mapa_y_texto_ajuste.svg);"></div>
+        <div class="derecha soft-content col-md-3" style="top:600px; height: 4em; background-color:#333333ec;">
+          <div class="text-danger"> <b>Aviso:</b> El hotel exige 3 días de Hospedaje minimo</div>
+        </div>
     </div>
     <div class="spacer s0"></div>
     <div id="parallax1" class="parallaxParent">
@@ -189,7 +210,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
   </div>
     <div class="spacer s2"></div>
     
-    <div class=" content spacer s0 col-md-6 offset-md-3">
+    <div  id="hospedaje" class=" content spacer s0 col-md-6 offset-md-3">
       <div class="text-center">
         <h2 style="color: #333333;">Hospedaje</h2>
       </div>
@@ -205,7 +226,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item btn btn-outline-secondary col-3">
-                      <a class="nav-link text-info active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">PAGO EN UNA SOLA EXHIBICION PESOS MXN</a>
+                      <a class="nav-link text-info active " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">PAGO EN UNA SOLA EXHIBICION PESOS MXN</a>
                     </li>
                     <li class="nav-item btn btn-outline-secondary col-3">
                       <a class="nav-link text-info" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">PAGO EN DOS EXHIBICIONES PESOS MXN </a>
@@ -547,12 +568,12 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     </div>
     <div class="spacer s0"></div>
     <div id="parallax5" class="parallaxParent">
-      <div class="parallax-image" style="background-image: url(img/mapa_rivera_maya.jpg);"></div>
+      <div class="parallax-image " style="background-image: url(img/mapa_rivera_maya.jpg);"></div>
 
   </div>
-    <div class="spacer s1">
+    <div id="agenda" class="spacer s1">
         
-        <div class="box2 blue content  ">
+        <div  class="box2 blue content  ">
           <div class="text-center">
             <h2 style="color: #333333;">Agenda</h2>
           </div>
@@ -560,64 +581,64 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
             <div class="row col-md-12">
 
 
-                <div class="col-md-2 agenda">
-                    <div class="card align-items-center content" style="height: 20rem;">
+                <div class="col-md-2 agenda mb-1">
+                    <div class="card align-items-center content" style="height: 20rem;" >
                         <h5 class="card-title">Turismo</h5>
                         <div class="card-body ">
                           <p class="card-text text-info"> <small>14 de septiembre</small></p>
-                          <p class="card-text">Tour Chichén Itzá, Baño en Cenote y Valladolid</p>
-                          <img class="card-img-top" src="img/Foto tour Chichén-Itzá 1.jfif" alt="Card image cap">
+                          <p class="card-text text-wrap" style="overflow-y: auto;">Tour Chichén Itzá, Baño en Cenote y Valladolid</p>
+                          <img class="card-img-bottom" src="img/Foto tour Chichén-Itzá 1.jfif" alt="Card image cap">
                         </div>
                       </div>
                 </div>
-                <div class="col-md-2 agenda">
+                <div class="col-md-2 agenda mb-1">
                     <div class="card align-items-center content" style="height: 20rem;">
                         <h5 class="card-title">Turismo</h5>
                         <div class="card-body ">
                           <p class="card-text text-info"> <small>15 de septiembre</small></p>
-                          <p class="card-text">Tour Zonas Arqueologicas Tulum, Cobá y Muyil</p>
-                          <img class="card-img-top" src="img/Tulum.jpg" alt="Card image cap">
+                          <p class="card-text text-wrap">Tour Zonas Arqueologicas Tulum, Cobá y Muyil</p>
+                          <img class="card-img-bottom" src="img/Tulum.jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
 
-                <div class="col-md-2 agenda">
+                <div class="col-md-2 agenda mb-1">
                     <div class="card align-items-center content" style="height: 20rem;">
                         <h5 class="card-title">Actividad</h5>
                         <div class="card-body ">
                           <p class="card-text text-info"> <small>17 de septiembre</small></p>
                           <p class="card-text">Actividad sorpresa organizada por los novios</p>
-                          <img class="card-img-top" src="img/Fondo evento sorpresa.jpg" alt="Card image cap">
+                          <img class="card-img-bottom" src="img/Fondo evento sorpresa.jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
-                <div class="col-md-2 agenda">
+                <div class="col-md-2 agenda mb-1">
                     <div class="card align-items-center content " style="border-color: lightcoral; height: 20rem;" >
                         <h5 class="card-title">Boda</h5>
                         <div class="card-body ">
                           <p class="card-text text-info"> <small>18 de septiembre</small></p>
                           <p class="card-text">Nuestro día especial</p>
-                          <img class="card-img-top" src="img/Save_the_date_Jordi_y_Mayra.jpg" alt="Card image cap">
+                          <img class="card-img-bottom" src="img/Save_the_date_Jordi_y_Mayra.jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
-                <div class="col-md-2 agenda">
+                <div class="col-md-2 agenda mb-1">
                     <div class="card align-items-center content" style="height: 20rem;" >
                         <h5 class="card-title">Torna Boda</h5>
                         <div class="card-body ">
                           <p class="card-text text-info"> <small>19 de septiembre</small></p>
                           <p class="card-text">Actividad en el hotel</p>
-                          <img class="card-img-top" src="img/Boda y tornaboda.jpg" alt="Card image cap">
+                          <img class="card-img-bottom" src="img/Boda y tornaboda.jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
-                <div class="col-md-2 agenda">
+                <div class="col-md-2 agenda mb-1">
                   <div class="card align-items-center content " style="height: 20rem;" >
                     <h5 class="card-title">Descargar la agenda</h5>
                     <div class="card-body ">
                       <p class="card-text text-info"> <small>...</small></p>
                       <div class="btn btn-outline-secondary"><a class="text-info" href="#">Descarga agenda completa</a></div>
-                      <img class="card-img-top" src="img/arrow.png" alt="Card image cap">
+                     
                     </div>
                    
                     </div>
@@ -706,7 +727,12 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                         .setTween("#parallax5 > div", {y: "80%", ease: Linear.easeNone})
                         .addIndicators()
                         .addTo(controller);     
-    
+
+            var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
+                        .setPin("#pin1")
+                        .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+                        .addTo(controller);
+      
         $('#myTab a').on('click', function (e) {
             console.log("tab ")
             e.preventDefault()

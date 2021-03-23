@@ -90,7 +90,8 @@
         .card-img-bottom{
             height: 100px;
             width: auto;
-            
+ 
+
         
           }
         @media only screen and (max-width: 600px) {
@@ -118,13 +119,24 @@
             background-color:#ffffffaf;
           }
         }
+        @media only screen and (max-width: 900px) {
+          .portada{
+            position: relative;
+            width: 110%;
+            bottom: 0px;
+
+  
+          }
+
+        }
+
         @media only screen and (max-width: 600px) {
-          .card-img-bottom{
-            height:150px;
-            width: auto;
-            background-color:#FFFFFF;
-            
-            overflow: hidden;
+          .portada{
+            position: relative;
+            width: 110%;
+            bottom: 0px;
+
+  
           }
           .text-info{
             font-size: 70%;
@@ -148,17 +160,17 @@
         }
         table.table-bordered {
             border:1px solid #be400e;
-          }
-          table.table-dark{
-            background-color: #be400eda;
-          }
-          .agenda{
-            background-image: url("img/fondo_agenda_smoth.jpg");
-          }
-          .titulo {
-           
-                height: 90px;
-          }
+        }
+        table.table-dark{
+          background-color: #be400eda;
+        }
+        .agenda{
+          background-image: url("img/fondo_agenda_smoth.jpg");
+        }
+        .titulo {
+          
+              height: 90px;
+        }
     </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar" style="font-family: 'Pieces of Eight';">
@@ -191,7 +203,7 @@
    
               </ul>
               <div class="offset-md-2 col-md-3 texto-resaltado"> <h3><b>Invitados 108/130</b></h3></div>
-              <div class="derecha soft-content col-md-3 aviso" >
+              <div class="derecha soft-content col-lg-3 col-md-6 aviso" >
                 <div class="texto-resaltado"> <b>Aviso:</b> Aforo máximo 130 personas, mínimo 3 noches reservadas.</div>
               </div>
             </div>
@@ -199,7 +211,7 @@
         </nav>
     <div class="spacer s0"></div>
     <div id="parallax4" class="parallaxParent container">
-        <div class="parallax-image" style="background-image: url(img/mapa_y_texto_ajuste.svg);"></div>
+        <div class="parallax-image portada " style="background-image: url(img/mapa_y_texto_ajuste.svg);"></div>
 
     </div>
     <div class="spacer s0"></div>
@@ -226,7 +238,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     <div class="spacer s0"></div>
     <div id="parallax2" class="parallaxParent container">
       <div class="parallax-image" style="background-image: url(img/MJ-90.jpg);"></div>
-      <div class="derecha soft-content offset-md-2 col-md-3" style="top:-340px">
+      <div class="derecha soft-content offset-md-2 col-md-6 col-lg-4" style="top:-340px">
         <br>
         <br>
         <br>
@@ -248,7 +260,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     <div class="spacer s0"></div>
     <div id="parallax3" class="parallaxParent container">
       <div class="parallax-image" style="background-image: url(img/MJ-87.jpg);"></div>
-      <div class="derecha soft-content  offset-md-7 col-md-3" style="top:-340px">
+      <div class="derecha soft-content  offset-md-5 offset-lg-7 col-md-6 col-lg-4" style="top:-340px">
         <br>
         <br>
         <br>
@@ -285,16 +297,16 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
             <div class="col-12">
                
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item btn btn-outline-secondary col-3">
+                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12 co-xm">
                       <a class="nav-link texto-resaltado active " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">PAGO EN UNA SOLA EXHIBICION PESOS MXN</a>
                     </li>
-                    <li class="nav-item btn btn-outline-secondary col-3">
+                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12">
                       <a class="nav-link texto-resaltado" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">PAGO EN DOS EXHIBICIONES PESOS MXN </a>
                     </li>
-                    <li class="nav-item btn btn-outline-secondary col-3">
+                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12">
                       <a class="nav-link texto-resaltado" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">PAGO EN UNA SOLA EXHIBICION EUROS </a>
                     </li>
-                    <li class="nav-item btn btn-outline-secondary col-3">
+                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12">
                       <a class="nav-link texto-resaltado" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">PAGO EN DOS EXHIBICIONES EUROS </a>
                     </li>
                   </ul>
@@ -305,36 +317,36 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   <div class="tab-content">
                     <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <table class="table table-bordered  ">
-                          <thead>
+                          <tbody>
                             <tr>
                               <tr>
-                                <th colspan="5">
+                                <td colspan="5">
                                 <p style="text-align: center;"><span style="font-weight: 400; font-size: 85%;">PAGO EN UNA SOLA EXHIBICION PESOS MXN</span></p>
                                 </td>
                                 </tr>
                                 <tr>
-                                <th>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TARIFAS EN </span></p>
-                                </th>
+                                <td>
+                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TARIFAS EN PESOS MXN </span></p>
+                                </td>
                                 <td style="text-align: center;">
                                 <p><span style="font-weight: 400; font-size: 80%;">DOBLE</span></p>
                                 <p><span style="font-weight: 400; font-size: 80%;">3 noches</span></p>
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                 <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TRIPLE</span></p>
                                 <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">3 noches</span></p>
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                 <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">NIÑO</span></p>
                                 <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(4 a 12 años)</span></p>
-                                </th>
-                                <th>
+                                </td>
+                                <td>
                                 <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">FECHA DE PAGO</span></p>
-                                </th>
+                                </td>
                                 </tr>
                             </tr>
-                          </thead>
-                            <tbody>
+                      
+                      
                              
                               <tr>
                               <td>
@@ -383,7 +395,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                             </tr>
                             <tr>
                             <td>
-                            <p style="text-align: center;"><span style="font-size: 80%;"><span style="font-weight: 400;">TARIFAS EN PESOS M</span>XN</span></p>
+                            <p style="text-align: center;"><span style="font-size: 80%;"><span style="font-weight: 400;">TARIFAS EN PESOS MXN</span></span></p>
                             </td>
                             <td>
                             <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">DOBLE</span></p>
@@ -648,14 +660,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
             <div class="row col-md-12">
 
                   <!-- Card turismo1 -->
-                <div class="col-md-2 agenda mb-1 offset-md-1" data-toggle="modal" data-target="#turismo1">
-                    <div class="card align-items-center content" style="height: 20rem;" >
+                <div class="col-md-2 col-12 col-lg-2 agenda mb-1 offset-md-1" data-toggle="modal" data-target="#turismo1">
+                    <div class="card h-100 align-items-center content"  >
                         <h5 class="card-title">Turismo</h5>
-                        <div class="card-body ">
+                        <div class="card-body d-flex  flex-column ">
                           <p class="card-text texto-resaltado"> <small>14 de septiembre</small></p>
                           <p class="card-text text-wrap" style="overflow-y: auto;">Tour Chichén Itzá, Baño en cenote y Valladolid</p>
                           <b>Adulto: $ 850  <br> Niño: $700 (3-9 años)</b>
-                          <img class="card-img-bottom" src="img/Foto tour Chichén-Itzá 1.jfif" alt="Card image cap">
+                          <img class="card-img-bottom mt-auto p-2" src="img/Foto tour Chichén-Itzá 1.jfif" alt="Card image cap">
                         </div>
                       </div>
                 </div>
@@ -721,14 +733,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                  <!-- Card turismo2 -->
-                <div class="col-md-2 agenda mb-1"  data-toggle="modal" data-target="#turismo2">
-                    <div class="card align-items-center content" style="height: 20rem;">
+                <div class="col-md-2 col-12 col-lg-2  agenda mb-1"  data-toggle="modal" data-target="#turismo2">
+                    <div class="card h-100 align-items-center content" >
                         <h5 class="card-title">Turismo</h5>
-                        <div class="card-body ">
+                        <div class="card-body d-flex   flex-column">
                           <p class="card-text texto-resaltado"> <small>15 de septiembre</small></p>
                           <p class="card-text text-wrap">Tulum, Cobá y Aldea Maya</p>
-                          <b>Adulto: $1,050  <br> Niño: $900 (3-9 años)</b>
-                          <img class="card-img-bottom" src="img/tulum (2).jpg" alt="Card image cap">
+                          <b>Adulto: $1,050 <br>  Niño: $900 </b>
+                          <img class="card-img-bottom mt-auto p-2" src="img/tulum (2).jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
@@ -793,14 +805,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                 <!-- Card actividad1 -->
-                <div class="col-md-2 agenda mb-1" data-toggle="modal" data-target="#actividad1">
-                    <div class="card align-items-center content" style="height: 20rem;">
+                <div class="col-md-2  col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#actividad1">
+                    <div class="card h-100 align-items-center content" >
                         <h5 class="card-title">Actividad</h5>
-                        <div class="card-body ">
+                        <div class="card-body d-flex   flex-column">
                           <p class="card-text texto-resaltado"> <small>17 de septiembre</small></p>
                           <p class="card-text">Actividad organizada por los novios</p>
                           <b>Más información proximamente</b>
-                          <img class="card-img-bottom" src="img/pregunta.png" style="height: 50px;" alt="Card image cap">
+                          <img class="card-img-bottom mt-auto p-2" src="img/pregunta.png"  alt="Card image cap">
                         </div>
                       </div>
                 </div>
@@ -858,14 +870,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                   <!-- Card boda -->
-                <div class="col-md-2 agenda mb-1"  data-toggle="modal" data-target="#boda">
-                    <div class="card align-items-center content " style="border-color: lightcoral; height: 20rem;" >
+                <div class="col-md-2 col-12 col-lg-2 agenda mb-1"  data-toggle="modal" data-target="#boda">
+                    <div class="card h-100 align-items-center content " style="border-color: lightcoral; " >
                         <h5 class="card-title">Boda</h5>
-                        <div class="card-body ">
+                        <div class="card-body d-flex  flex-column">
                           <p class="card-text texto-resaltado"> <small>18 de septiembre</small></p>
                           <p class="card-text">Nuestro día especial</p>
                           <b></b>
-                          <img class="card-img-bottom" src="img/Save_the_date_Jordi_y_Mayra.png" alt="Card image cap">
+                          <img class="card-img-bottom mt-auto p-2" src="img/Save_the_date_Jordi_y_Mayra.png" alt="Card image cap">
                         </div>
                       </div>
                 </div>
@@ -931,14 +943,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                   <!-- Card tornaboda -->
-                <div class="col-md-2 agenda mb-1" data-toggle="modal" data-target="#tornaboda">
-                    <div class="card align-items-center content" style="height: 20rem;" >
+                <div class="col-md-2 col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#tornaboda">
+                    <div class="card h-100  align-items-center content"  >
                         <h5 class="card-title">Torna Boda</h5>
-                        <div class="card-body ">
+                        <div class="card-body d-flex   flex-column ">
                           <p class="card-text texto-resaltado"> <small>19 de septiembre</small></p>
                           <p class="card-text">Actividad en el hotel</p>
                           <b>Codigo de vestimenta: BLANCO</b>
-                          <img class="card-img-bottom" src="img/playa.jpg" alt="Card image cap">
+                          <img class="card-img-bottom  mt-auto p-2" src="img/playa.jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
@@ -981,12 +993,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                       </div>
                     </div>
                   </div>
-                </div>
-
-            
- 
-
-   
+                </div>           
 
             </div>
             

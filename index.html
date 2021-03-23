@@ -204,7 +204,7 @@
     </div>
     <div class="spacer s0"></div>
     <div id="parallax1" class="parallaxParent">
-        <div class="parallax-image" style="background-image: url(img/M+J-74.jpg);"></div>
+        <div class="parallax-image" style="background-image: url(img/MJ-74.jpg);"></div>
     </div>
     <div class="spacer s1">
         <div class="box2 blue content text-center">
@@ -225,7 +225,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     </div>
     <div class="spacer s0"></div>
     <div id="parallax2" class="parallaxParent container">
-      <div class="parallax-image" style="background-image: url(img/M+J-90.jpg);"></div>
+      <div class="parallax-image" style="background-image: url(img/MJ-90.jpg);"></div>
       <div class="derecha soft-content offset-md-2 col-md-3" style="top:-340px">
         <br>
         <br>
@@ -247,7 +247,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     </div>
     <div class="spacer s0"></div>
     <div id="parallax3" class="parallaxParent container">
-      <div class="parallax-image" style="background-image: url(img/M+J-87.jpg);"></div>
+      <div class="parallax-image" style="background-image: url(img/MJ-87.jpg);"></div>
       <div class="derecha soft-content  offset-md-7 col-md-3" style="top:-340px">
         <br>
         <br>
@@ -1079,50 +1079,50 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
     <script>
         // init controller
-        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
+        var controller = new ScrollMagic.Controller({removeIndicators: true, globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
     </script>
     <script>
         // init controller
     
         // build scenes
+      
         new ScrollMagic.Scene({triggerElement: "#parallax0"})
                         .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-                        .addIndicators()
+     
                         .addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
-                        .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-                        .addIndicators()
+      
                         .addTo(controller);
     
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
                         .setTween("#parallax2 > div", {y: "80%", ease: Linear.easeNone})
-                        .addIndicators()
+             
                         .addTo(controller);
     
         new ScrollMagic.Scene({triggerElement: "#parallax3"})
                         .setTween("#parallax3 > div", {y: "80%", ease: Linear.easeNone})
-                        .addIndicators()
+                   
                         .addTo(controller);
         
         new ScrollMagic.Scene({triggerElement: "#parallax4"})
                         .setTween("#parallax4 > div", {y: "80%", ease: Linear.easeNone})
-                        .addIndicators()
+                
                         .addTo(controller);
        new ScrollMagic.Scene({triggerElement: "#parallax5"})
                         .setTween("#parallax5 > div", {y: "80%", ease: Linear.easeNone})
-                        .addIndicators()
+                  
                         .addTo(controller);     
 
             var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
                         .setPin("#pin1")
-                        .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+       
                         .addTo(controller);
       
         $('#myTab a').on('click', function (e) {

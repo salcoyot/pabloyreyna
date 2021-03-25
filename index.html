@@ -59,9 +59,9 @@
           background:rgba(248, 240, 218, 0.510);
           padding:1em;
     
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
         }
         .content-full {
             height:100%;
@@ -88,8 +88,10 @@
     
         }
         .card-img-bottom{
-            height: 100px;
-            width: auto;
+    
+            max-width:100%;
+max-height:100%;
+     
  
 
         
@@ -662,14 +664,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
             <div class="row col-md-12">
 
                   <!-- Card turismo1 -->
-                <div class="col-md-2 col-12 col-lg-2 agenda mb-1 offset-md-1" data-toggle="modal" data-target="#turismo1">
+                <div class="col-md-12 col-12 col-lg-2 agenda mb-1 offset-lg-1 offset-md-0" data-toggle="modal" data-target="#turismo1">
                     <div class="card h-100 align-items-center content"  >
                         <h5 class="card-title">Turismo</h5>
                         <div class="card-body d-flex  flex-column ">
                           <p class="card-text texto-resaltado"> <small>14 de septiembre</small></p>
                           <p class="card-text text-wrap" style="overflow-y: auto;">Tour Chichén Itzá, Baño en cenote y Valladolid</p>
                           <b>Adulto: $ 850  <br> Niño: $700 (3-9 años)</b>
-                          <img class="card-img-bottom mt-auto p-2" src="img/Foto tour Chichén-Itzá 1.jfif" alt="Card image cap">
+                          <img class="card-img-bottom mt-auto p-2" src="img/chichen.jpg" alt="Card image cap">
                         </div>
                       </div>
                 </div>
@@ -735,7 +737,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                  <!-- Card turismo2 -->
-                <div class="col-md-2 col-12 col-lg-2  agenda mb-1"  data-toggle="modal" data-target="#turismo2">
+                <div class="col-md-12 col-12 col-lg-2  agenda mb-1"  data-toggle="modal" data-target="#turismo2">
                     <div class="card h-100 align-items-center content" >
                         <h5 class="card-title">Turismo</h5>
                         <div class="card-body d-flex   flex-column">
@@ -807,7 +809,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                 <!-- Card actividad1 -->
-                <div class="col-md-2  col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#actividad1">
+                <div class="col-md-12  col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#actividad1">
                     <div class="card h-100 align-items-center content" >
                         <h5 class="card-title">Actividad</h5>
                         <div class="card-body d-flex   flex-column">
@@ -872,7 +874,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                   <!-- Card boda -->
-                <div class="col-md-2 col-12 col-lg-2 agenda mb-1"  data-toggle="modal" data-target="#boda">
+                <div class="col-md-12 col-12 col-lg-2 agenda mb-1"  data-toggle="modal" data-target="#boda">
                     <div class="card h-100 align-items-center content " style="border-color: lightcoral; " >
                         <h5 class="card-title">Boda</h5>
                         <div class="card-body d-flex  flex-column">
@@ -945,7 +947,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                   </div>
                 </div>
                   <!-- Card tornaboda -->
-                <div class="col-md-2 col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#tornaboda">
+                <div class="col-md-12 col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#tornaboda">
                     <div class="card h-100  align-items-center content"  >
                         <h5 class="card-title">Torna Boda</h5>
                         <div class="card-body d-flex   flex-column ">
@@ -1002,7 +1004,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
         </div>
 
     </div>
-    <div class="spacer s1 text-center content col-md-6 offset-md-3">
+    <div class="spacer s1 text-center content col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6 offset-lg-3">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

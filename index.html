@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
    
    <style type="text/css">
+ 
         body{
             background-image: url(img/Fondo_Nuestra_historia_white.jpg);
         }
@@ -59,9 +60,9 @@
           background:rgba(248, 240, 218, 0.510);
           padding:1em;
     
-        -webkit-box-sizing:border-box;
-        -moz-box-sizing:border-box;
-        box-sizing:border-box;
+          -webkit-box-sizing:border-box;
+          -moz-box-sizing:border-box;
+           box-sizing:border-box;
         }
         .content-full {
             height:100%;
@@ -88,21 +89,10 @@
     
         }
         .card-img-bottom{
-    
             max-width:100%;
-max-height:100%;
-     
- 
-
+            max-height:100%;    
+          }
         
-          }
-        @media only screen and (max-width: 600px) {
-          .carousel, .carousel-inner > .carousel-item > img {
-
-            height: auto;
-            width: 100%;
-          }
-        }
         .texto-resaltado{
           color:#be400e;
 
@@ -113,55 +103,14 @@ max-height:100%;
           background-color:#ffffff67;
           font-size: 130%;
         }
-        @media only screen and (max-width: 600px) {
-
-          .aviso{
-            position: relative;
-            right:0px;
-            bottom: 0px;
-            background-color:#ffffffaf;
-          }
-        }
-        @media only screen and (max-width: 900px) {
-   
-          .portada{
-            position: relative;
-            width: 110%;
-            bottom: 0px;
-
-  
-          }
-
-        }
-
-        @media only screen and (max-width: 600px) {
-          .portada{
-            position: relative;
-            width: 110%;
-            bottom: 0px;
-
-  
-          }
-          .text-info{
-            font-size: 70%;
-          }
-          @font-face {
-            font-family: 'pieces';
-            src: url('img/pieces_of_eight-webfont.woff')  format('woff'),
-                url('img/pieces_of_eight-webfont.woff2') format('woff2'),
-                 url("img/Pieces_of_Eight.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-          }
+        p, div, h5 {
+            -webkit-text-size-adjust: 170%;
+            text-size-adjust: 170%;
      
-          .btn-pieces{
-            background-color: #be400e;
-            color: white;
-            border-color:  #be400e;
-
           }
-        
-        }
+  
+ 
+
         table.table-bordered {
             border:1px solid #be400e;
         }
@@ -175,6 +124,53 @@ max-height:100%;
           
               height: 90px;
         }
+         
+
+        .panel{
+          top:-340px;
+        }
+
+        @media only screen and (max-width: 1000px) {
+          .portada{
+            position: relative;
+            width: 120%;
+            bottom: 0px;
+            left:-150px;
+
+  
+          }
+          .carousel, .carousel-inner > .carousel-item > img {
+            height:initial;
+    
+         }
+
+     
+          .btn-pieces{
+            background-color: #be400e;
+            color: white;
+            border-color:  #be400e;
+
+          }
+          .carousel, .carousel-inner > .carousel-item > img {
+            max-height: 100%;
+            max-width: 100%;
+          }
+          
+          .panel{
+            top:unset;
+            top: -700px;
+           
+         
+          }
+          .aviso{
+            position: relative;
+            left:0px;
+            bottom: 100px;
+            background-color:#ffffff;
+          }
+
+        }
+
     </style>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar" style="font-family: 'Pieces of Eight';">
@@ -214,7 +210,7 @@ max-height:100%;
 
         </nav>
     <div class="spacer s0"></div>
-    <div id="parallax4" class="parallaxParent container">
+    <div id="parallax4" class="parallaxParent ">
         <div class="parallax-image portada " style="background-image: url(img/mapa_y_texto_ajuste.svg);"></div>
 
     </div>
@@ -242,7 +238,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     <div class="spacer s0"></div>
     <div id="parallax2" class="parallaxParent container">
       <div class="parallax-image" style="background-image: url(img/MJ-90.jpg);"></div>
-      <div class="derecha soft-content offset-md-2 col-md-6 col-lg-4" style="top:-340px">
+      <div class="derecha soft-content offset-md-1 col-md-7 col-lg-4 panel" >
         <br>
         <br>
         <br>
@@ -264,7 +260,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     <div class="spacer s0"></div>
     <div id="parallax3" class="parallaxParent container">
       <div class="parallax-image" style="background-image: url(img/MJ-87.jpg);"></div>
-      <div class="derecha soft-content  offset-md-5 offset-lg-7 col-md-6 col-lg-4" style="top:-340px">
+      <div class="derecha soft-content  offset-md-5  offset-lg-7 col-md-7 col-lg-4 panel">
         <br>
         <br>
         <br>
@@ -665,8 +661,8 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
 
                   <!-- Card turismo1 -->
                 <div class="col-md-12 col-12 col-lg-2 agenda mb-1 offset-lg-1 offset-md-0" data-toggle="modal" data-target="#turismo1">
-                    <div class="card h-100 align-items-center content"  >
-                        <h5 class="card-title">Turismo</h5>
+                    <div class="card h-100  content"  >
+                        <div class="card-title"></div><h5 >Turismo</h5>
                         <div class="card-body d-flex  flex-column ">
                           <p class="card-text texto-resaltado"> <small>14 de septiembre</small></p>
                           <p class="card-text text-wrap" style="overflow-y: auto;">Tour Chichén Itzá, Baño en cenote y Valladolid</p>
@@ -738,7 +734,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                 </div>
                  <!-- Card turismo2 -->
                 <div class="col-md-12 col-12 col-lg-2  agenda mb-1"  data-toggle="modal" data-target="#turismo2">
-                    <div class="card h-100 align-items-center content" >
+                    <div class="card h-100  content" >
                         <h5 class="card-title">Turismo</h5>
                         <div class="card-body d-flex   flex-column">
                           <p class="card-text texto-resaltado"> <small>15 de septiembre</small></p>
@@ -810,7 +806,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                 </div>
                 <!-- Card actividad1 -->
                 <div class="col-md-12  col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#actividad1">
-                    <div class="card h-100 align-items-center content" >
+                    <div class="card h-100  content" >
                         <h5 class="card-title">Actividad</h5>
                         <div class="card-body d-flex   flex-column">
                           <p class="card-text texto-resaltado"> <small>17 de septiembre</small></p>
@@ -875,7 +871,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                 </div>
                   <!-- Card boda -->
                 <div class="col-md-12 col-12 col-lg-2 agenda mb-1"  data-toggle="modal" data-target="#boda">
-                    <div class="card h-100 align-items-center content " style="border-color: lightcoral; " >
+                    <div class="card h-100  content " style="border-color: lightcoral; " >
                         <h5 class="card-title">Boda</h5>
                         <div class="card-body d-flex  flex-column">
                           <p class="card-text texto-resaltado"> <small>18 de septiembre</small></p>
@@ -948,7 +944,7 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
                 </div>
                   <!-- Card tornaboda -->
                 <div class="col-md-12 col-12 col-lg-2 agenda mb-1" data-toggle="modal" data-target="#tornaboda">
-                    <div class="card h-100  align-items-center content"  >
+                    <div class="card h-100 21 content"  >
                         <h5 class="card-title">Torna Boda</h5>
                         <div class="card-body d-flex   flex-column ">
                           <p class="card-text texto-resaltado"> <small>19 de septiembre</small></p>
@@ -1004,7 +1000,8 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
         </div>
 
     </div>
-    <div class="spacer s1 text-center content col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6 offset-lg-3">
+    <br>
+    <div class="spacer s1 text-center  col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6 offset-lg-3">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -1076,13 +1073,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
+          <span class="sr-only texto-resaltado">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
+          <span class="sr-only texto-resaltado">Next</span>
         </a>
       </div>
+      <br>
         <a class="texto-resaltado" href="https://www.facebook.com/salvadormejora" target="_blank">Copyright © 2020 Salvador Mejorada</a>
     </div>
   

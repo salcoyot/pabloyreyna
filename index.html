@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-	<title>Mayra y Jordi</title>
+	<title>Pablo & Reyna</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
@@ -11,10 +11,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
    
    <style type="text/css">
+  @import url('https://fonts.googleapis.com/css?family=Ruda:900');
+        /* body{
+            background-image: url(img/PyR.jpeg);
+            background-color: #d8f0f1; 
+        } */
+       
+
+body {
+  background-image: url(img/symphony.png);
+  background-position: bottom;
+  animation: 4s linear 0s infinite bp;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #666666;
+    font-weight:500;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.53846154;
  
-        body{
-            background-image: url(img/Fondo_Nuestra_historia_white.jpg);
-        }
+
+}
+
+@keyframes bp {
+  from {
+    background-position:  198px 0;
+  }
+  
+  to {
+    background-position:  0 198px;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font: Ruda;
+}
+
+
         .parallax-image {
             
             position:absolute;
@@ -94,7 +131,7 @@
           }
         
         .texto-resaltado{
-          color:#be400e;
+          color:#0e78be;
 
         }
         .aviso{
@@ -112,10 +149,10 @@
  
 
         table.table-bordered {
-            border:1px solid #be400e;
+            border:1px solid #0e78be;
         }
         table.table-dark{
-          background-color: #be400eda;
+          background-color: #0e78be;
         }
         .agenda{
           background-image: url("img/fondo_agenda_smoth.jpg");
@@ -147,9 +184,9 @@
 
      
           .btn-pieces{
-            background-color: #be400e;
+            background-color: #0e78be;
             color: white;
-            border-color:  #be400e;
+            border-color:  #0e78be;
 
           }
           .carousel, .carousel-inner > .carousel-item > img {
@@ -176,8 +213,8 @@
 
     </style>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" id="navbar" style="font-family: 'Pieces of Eight';">
-            <a class="navbar-brand" href="#"> <b class="texto-resaltado">Mayra & Jordi</b> </a>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="navbar" data-toggle="sticky-onscroll" >
+            <a class="navbar-brand" href="#"><h2> <b class="texto-resaltado">Pablo & Reyna</b> </h2> </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -187,67 +224,96 @@
                   <a class="nav-link" href="#">Inicio </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#parallax1">Sobre nosotros</a>
+                  <a class="nav-link" href="#parallax1">Novios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#hospedaje">Hospedaje</a>
+                    <a class="nav-link" href="#hospedaje">Boda</a>
                 </li>
+
                 <li class="nav-item">
-                  <a class="nav-link" href="#agenda">Agenda</a>
-                </li>
-              
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Boda</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Mesa de regalos</a>
-                </li>
+                  <a class="nav-link " href="mesaregalos" data-toggle="modal" data-target="#mesaregalos">Mesa de regalos</a>
+             <!--      <div class="dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      Mesa de regalos
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" target="_blank" href="https://www.amazon.com.mx/wedding/organize-registry?ref_=hit_wr_dp_dp_mdl_vr">Amazon</a></li>
+                      <li><a class="dropdown-item" target="_blank" href="https://mesaderegalos.liverpool.com.mx/gestiondeeventos/listaderegalos/50582618">Liverpool</a></li>
                 
+                    </ul>
+                  </div> -->
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#agenda">Memorias</a>
+                </li>
    
               </ul>
-              <div class="offset-md-2 col-md-3 texto-resaltado"> <h3><b>Invitados 108/130</b></h3></div>
-              <div class="derecha soft-content col-lg-3 col-md-6 aviso" >
-                <div class="texto-resaltado"> <b>Aviso:</b> Aforo máximo 130 personas, mínimo 3 noches reservadas.</div>
-              </div>
+              <div class="offset-md-2 col-md-3 texto-resaltado"> <h3><b>Invitados 0/100</b></h3></div>
+             
             </div>
 
         </nav>
+                 <!-- Modal Mesa de regalos-->
+                 <div class="modal fade " id="mesaregalos" tabindex="-1" role="dialog" aria-labelledby="tornaboda" aria-hidden="true">
+                  <div class="modal-dialog " role="document">
+                    <div class="modal-content ">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="exampleModalLabel">Mesa de regalos</h4>
+                        <button type="button" class="close btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body texto-resaltado row">
+                        <blockquote class="blockquote text-center col-12">
+                          Si gustas obsequiarnos algo para nuestro nuevo hogar estas son algunas opciones
+                         <br><br>
+                        <footer class="blockquote-footer">Att Pablo y Reyna</footer>
+                      </blockquote>                   
+                        <br><br>
+
+                        <a class=" btn btn-outline-secondary " target="_blank" href="https://mesaderegalos.liverpool.com.mx/gestiondeeventos/listaderegalos/50582618">Liverpool 🎁</a>
+                        <br><br><div class="col-12 text-center  ">
+                          <br>
+                            <h4> <i> Numero de cuenta</i></h4><br>
+                            <b>BBVA</b><br>
+                            <i>Cuenta <b> ...</b></i><br>
+                            <i>Clabe <b> ... </b></i><br>
+                        </div>															
+                      </div>       
+                    
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
     <div class="spacer s0"></div>
     <div id="parallax4" class="parallaxParent ">
-        <div class="parallax-image portada " style="background-image: url(img/mapa_y_texto_ajuste.svg);"></div>
+        <div class="parallax-image portada " style="background-image: url(img/PyR3.jpeg);"></div>
 
     </div>
     <div class="spacer s0"></div>
     <div id="parallax1" class="parallaxParent">
-        <div class="parallax-image" style="background-image: url(img/MJ-74.jpg);"></div>
+        <div class="parallax-image" style="background-image: url(img/PyR6.jpeg);"></div>
     </div>
     <div class="spacer s1">
         <div class="box2 blue content text-center">
-          <img class="titulo" src="img/nuestra_historia.png" alt="nuestra historia">
+          
             <p class="col-md-10 col-lg-6 offset-md-1 offset-lg-3  ">
-              Dicen que Playa del Carmen es un lugar mágico … Jordi vivía una semana al mes en playa ya que regularmente viajaba tres, Mayra llegó de Panamá para la despedida de su prima y por azares del destino su hermana tenía un amigo en común con Jordi, así es como se conocieron. Cada uno estaba en su mundo …  meses después Jordi viaja a CDMX donde invita a cenar a Mayra, salieron repetidas veces, ambos la pasaban increíble … aunque ninguno quería aceptarlo.
-
-Fue hasta Febrero 2019 donde sucedió la magia en isla Holbox, aquí comenzó la aventura …
-
-Todo fue espontáneo, natural … que de pronto, deseábamos pasar más tiempo juntos, los fines de semana se hacían cortos y la distancia pesaba cada vez más … No hubo un flechazo inicial como en las historias de Disney, el amor se construye, es reírse a carcajadas, es poder llorar sin avergonzarse, son las llamadas de madrugada diciendo te extraño, es poder ser tú mismo sin tener que disimular, es sentir ese abrazo que te hace sentir seguro y esa mirada que no necesita expresarse con palabras … es ese lugar donde simplemente eres tu.
-
-Hemos tomado más de 50 vuelos para vernos … por 4 países, visitado 28 ciudades y en un viaje pandémico a Huasteca Potosina ambos decidimos que queremos contar aún más historias juntos, descubrir más lugares, hacernos crecer uno al otro, vernos brillar y ser siempre nuestro soporte ante cualquier caída.
-
-Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando la vida te cruza con alguien tan extraordinario, no hay límite que los pueda detener!
+              <h1>Reyna</h1>
             </p>
           
         </div>
     </div>
     <div class="spacer s0"></div>
     <div id="parallax2" class="parallaxParent container">
-      <div class="parallax-image" style="background-image: url(img/MJ-90.jpg);"></div>
+      <div class="parallax-image" style="background-image: url(img/PyR1.jpeg);"></div>
       <div class="derecha soft-content offset-md-1 col-md-7 col-lg-4 panel" >
         <br>
         <br>
         <br>
         <div>
-          Apareciste en el momento más inesperado …. disfrutaba mi tiempo, pero prefería estar contigo, me sentía bella y fuerte, pero prefería que me lo dijeras tú.Me hiciste entender que el amor es fácil .. que el amor fluye sin expectativas, contigo entendí que no existe el tiempo perfecto, que los momentos mágicos los vamos creando.Tu eres esa persona que complementa mi felicidad, ese hombre que admiro, el que me hace reír a diario, quién hace que sea una mejor versión de mi y me impulsa a creer que puedo lograr todo lo que me proponga.Que caminemos juntos disfrutando los momentos felices, la luz, la oscuridad, los pasos firmes y tropiezos … entendiendo que todo es un juego y tengo al mejor compañero, con la única garantía de que pase lo que pase estará a mi lado siempre!
-
+          Info...
         </div>
 
       </div>
@@ -255,23 +321,23 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     </div>
     
     <div class="spacer s1">
-        <div class="box2 blue " style="background-color: rgba(112, 197, 230, 0.397);">
+        <div class="box2 blue ">
             <p class="col-md-6 offset-md-3" ></p>
             <div class="col-md-6 offset-md-3 text-center titulo" >
-              <img class="titulo" src="img/mayrayjordi.png" alt="nuestra historia">
+              <h1>Pablo</h1>
             </div>
       
         </div>
     </div>
     <div class="spacer s0"></div>
     <div id="parallax3" class="parallaxParent container">
-      <div class="parallax-image" style="background-image: url(img/MJ-87.jpg);"></div>
+      <div class="parallax-image" style="background-image: url(img/PyR.jpeg);"></div>
       <div class="derecha soft-content  offset-md-5  offset-lg-7 col-md-7 col-lg-4 panel">
         <br>
         <br>
         <br>
         <div>
-          Totalmente inesperado fue nuestro encuentro, sorpresivo por la larga cadena de factores que lo propiciaron y sin duda mágico….El amor es más fácil de lo que pensamos, los sentimientos no se crean sencillamente nacen espontáneamente y hay que dejarlos salir sin represión.Me enorgullezco de tenerte como mi compañera de viaje, una mujer excepcional que saca a relucir mi mejor versión, la que nunca se rinde y propaga esa extraordinaria energía a todos los que la rodean.Contigo estoy seguro de siempre recorrer este largo camino lleno de altibajos fruto de pruebas que nos irán surgiendo en el camino las cuales nos ayudarán a fortalecer y consolidar cada día más.
+        Info...
         </div>
       </div>
     </div>
@@ -288,387 +354,23 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     
     <div  id="hospedaje" class=" content spacer s0 col-md-10 offset-md-1 offset-lg-3 col-lg-6">
       <div class="text-center">
-        
-        <img class=" titulo" src="img/hospedaje.png" alt="hospedaje">
+        <h1>Boda</h1>
       </div>
         
  
         <div class="row align-items-center text-center">
-            <div class="col-md-6 offset-md-3 " style="margin-bottom: 10px;">
-              <a href="https://www.thereefresorts.com/es/reefplayacar" target="_blank"><button class="btn btn-outline-secondary" ><img class="img-fluid" src="img/1547130261_5c37559575d04-thumb.svg" width="100%" alt="logo"></a>
-         
-            </div> 
-            <a href="https://wa.me/9842124661" target="_blank" class="texto-resaltado">Reserva aquí: <img class="img-fluid" src="img/whatsapp-icon-seeklogo.com.svg" width="5%" alt="logo wa"></a>
-            <br><br>
+
+
         
 
             <div class="col-12">
-               
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12 co-xm">
-                      <a class="nav-link texto-resaltado active " id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">PAGO EN UNA SOLA EXHIBICION PESOS MXN</a>
-                    </li>
-                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12">
-                      <a class="nav-link texto-resaltado" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">PAGO EN DOS EXHIBICIONES PESOS MXN </a>
-                    </li>
-                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12">
-                      <a class="nav-link texto-resaltado" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">PAGO EN UNA SOLA EXHIBICION EUROS </a>
-                    </li>
-                    <li class="nav-item btn btn-outline-secondary col-12 col-lg-3 col-md-12 col-sm-12">
-                      <a class="nav-link texto-resaltado" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">PAGO EN DOS EXHIBICIONES EUROS </a>
-                    </li>
-                  </ul>
-                  <div> <small> <b>*Precio por persona</b> </small></div>
-                 
-                  <div> *Tarifas vijentes para resevas realizadas antes del 15 de mayo. Posterior a la fecha mencionada se actualizarán las tarifas.</div>
-                  
-                  <!-- Tab panes -->
-                  <div class="tab-content">
-                    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <table class="table table-bordered  ">
-                          <tbody>
-                            <tr>
-                              <tr>
-                                <td colspan="5">
-                                <p style="text-align: center;">
-                                  <span style="font-weight: 400; font-size: 85%;">
-                                    PAGO EN UNA SOLA EXHIBICION PESOS MXN <br>
-                                    *Se confirma la reserva de la habitación al momento de recibir el pago.
-                                </span></p>
-                                </td>
-                                </tr>
-                                <tr>
-                                <td>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TARIFAS EN PESOS MXN </span></p>
-                                </td>
-                                <td style="text-align: center;">
-                                <p><span style="font-weight: 400; font-size: 80%;">DOBLE</span></p>
-                                <p><span style="font-weight: 400; font-size: 80%;">3 noches</span></p>
-                                </td>
-                                <td>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TRIPLE</span></p>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">3 noches</span></p>
-                                </td>
-                                <td>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">NIÑO</span></p>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(4 a 12 años)</span></p>
-                                </td>
-                                <td>
-                                <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">FECHA DE PAGO</span></p>
-                                </td>
-                                </tr>
-                            </tr>
-                      
-                      
-                             
-                              <tr>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">SUPERIOR</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$4,999</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$4,999</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Del 15 de Marzo al 15 de Julio 2021</span></p>
-                              </td>
-                              </tr>
-                              <tr>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">PREMIUM</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$6,199</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$6,199</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                              </td>
-                              <td>
-                              <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Del 15 de Marzo al 15 de Julio 2021</span></p>
-                              </td>
-                              </tr>
-                            </tbody>
-                            </table>
-                    </div>
-                    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <table class="table table-bordered ">
-                            <tbody>
-                            <tr>
-                            <td colspan="6">
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 85%;">PAGO EN DOS EXHIBICIONES
-                              <br>
-                                    *Se confirma la reserva de la habitación al momento de recibir el 1er pago.
-                            </span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>
-                            <p style="text-align: center;"><span style="font-size: 80%;"><span style="font-weight: 400;">TARIFAS EN PESOS MXN</span></span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">DOBLE</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">3 noches</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TRIPLE</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">3 noches</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">NIÑO</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(4 a 12 años)</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">FECHA LIMITE 1er PAGO</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">FECHA LIMITE 2do PAGO</span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">SUPERIOR</span></p>
-                            </td>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$5,500</span></p>
-                            </td>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$5,500</span></p>
-                            </td>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">15 de mayo 2021</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">($2,750)</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">15 de julio 2021</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">($2,750)</span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td style="text-align: center;"><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">PREMIUM</span></p>
-                            </td>
-                            <td style="text-align: center;"><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$6,700</span></p>
-                            </td>
-                            <td style="text-align: center;"><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">$6,700</span></p>
-                            </td>
-                            <td style="text-align: center;"><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">15 de mayo 2021</span></p>
-                            <p><span style="font-weight: 400; font-size: 80%;">($3,350)</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">15 de julio 2021</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">($3,350)</span></p>
-                            </td>
-                            </tr>
-                            </tbody>
-                            </table>
-                    </div>
-                    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
-                        <table class="table table-bordered ">
-                            <tbody>
-                            <tr>
-                            <td colspan="5">
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 85%;">PAGO EN UNA SOLA EXHIBICION
-                              <br>
-                              *Se confirma la reserva de la habitación al momento de recibir el pago.
-                            </span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TARIFAS EN EUROS</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">DOBLE</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">8 noches</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">TRIPLE</span></p>
-                            <p><span style="font-weight: 400; font-size: 80%;">8 noches</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">NIÑO</span></p>
-                            <p><span style="font-weight: 400; font-size: 80%;">(4 a 12 años)</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">FECHA DE PAGO</span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">SUPERIOR</span></p>
-                            </td>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">548€</span></p>
-                            </td>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">548€</span></p>
-                            </td>
-                            <td><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Del 15 de Marzo al 15 de Julio 2021</span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td style="text-align: center;"><br>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">PREMIUM</span></p>
-                            </td>
-                            <td style="text-align: center;"><br>
-                            <p><span style="font-weight: 400; font-size: 80%;">684€</span></p>
-                            </td>
-                            <td style="text-align: center;"><br>
-                            <p><span style="font-weight: 400; font-size: 80%;">684€</span></p>
-                            </td>
-                            <td style="text-align: center;"><br>
-                            <p><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Del 15 de Marzo al 15 de Julio 2021</span></p>
-                            </td>
-                            </tr>
-                            </tbody>
-                            </table>
-                    </div>
-                    <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-                        <table class= " table table-bordered ">
-                            <tbody>
-                            <tr>
-                            <td colspan="6">
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 85%;">PAGO EN DOS EXHIBICIONES
-                              <br>
-                              *Se confirma la reserva de la habitación al momento de recibir el 1er pago.
-                            </span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TARIFAS EN EUROS</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">DOBLE</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">8 noches</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">TRIPLE</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">8 noches</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">NIÑO</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(4 a 12 años)</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">FECHA LIMITE 1er PAGO</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">FECHA LIMITE 2do PAGO</span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">&nbsp;SUPERIOR</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">610€</span></p>
-                            </td>
-                            <td>
-                            <p><span style="font-weight: 400; font-size: 80%;">610€</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">15 de mayo 2021</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(305€)</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">15 de julio 2021</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(305€)</span></p>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">PREMIUM</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">750€</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">750€</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">Gratis Max 2 por habitación</span></p>
-                            </td>
-                            <td style="text-align: center;">
-                            <p><span style="font-weight: 400; font-size: 80%;">15 de mayo 2021</span></p>
-                            <p><span style="font-weight: 400; font-size: 80%;">(375€)</span></p>
-                            </td>
-                            <td>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">15 de julio 2021</span></p>
-                            <p style="text-align: center;"><span style="font-weight: 400; font-size: 80%;">(375€)</span></p>
-                            </td>
-                            </tr>
-                            </tbody>
-                            </table>
-                    </div>
-                  </div>
-            </div>
-            <div>
-              <p style="text-align: left;"><span style="font-size: 80%;">-Tarifas NETAS en Pesos Mexicanos MXN y EUROS (incluyen impuestos y propinas).</span><br><span style="font-size: 80%;">-Check in – 15:00 horas / Check out – 12:00 horas. Día de salida con posibilidad de seguir usando las instalaciones.</span>
-                <br><span style="font-size: 80%;">-Se consideran niños, de 4 a 12 años.&nbsp;</span>
-                <br><span style="font-size: 80%;">-Máxima ocupación: 3 adultos (mayor de 12 años) o 2 adultos y 2 menores de 12 años.</span>
-                <br><span style="font-size: 80%;">-Tarifas para un mínimo de 3 NOCHES.</span></p>
-            </div>
-            <div>
-                <div id="text-177576354" class="text">
-   
-                    <p style="padding-left: 40px; text-align: left;"><span style="font-size: 80%;"><strong>A</strong>. Nombre y 1er apellido del invitado + único (valor total de la reserva)</span><br><span style="font-size: 80%;"><strong>B</strong>. Nombre y 1er apellido del invitado + número de pago (1 de 2 y/o 2 de 2)</span></p>
-                    <p style="text-align: left;"><span style="font-size: 80%;">De no hacerlo no se podrán identificar estos pagos.</span></p>
-                    <p style="text-align: left;"><span style="font-size: 80%;"><strong>2.</strong> Pagos en monedas USD y EUR, se recomienda la plataforma https://transferwise.com/&nbsp;</span><br><span style="font-size: 80%;"><strong>3.</strong> La cuenta destino debe recibir el monto mencionado en las tablas anteriores, la comisión por transferencia corre a cargo del emisor.</span><br><span style="font-size: 80%;"><strong>4.</strong> Todos los cargos extras generados durante la estancia en el hotel, deberán de ser cubiertos antes de la salida</span>.</p>
-      
-                    <div class="collapse" id="collapseExample">
-                    <p style="text-align: left;"><strong><span style="font-size: 80%;">CANCELACIONES</span></strong><br><span style="font-size: 80%;">La cancelación de la reserva se realizará bajo el siguiente esquema:</span><br><span style="font-size: 80%;">Fecha&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Penalidad por cancelación</span><br><span style="font-size: 80%;">120 días o más&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; No hay Cargo</span><br><span style="font-size: 80%;">120 a 91 días&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Una noche de estancia.</span><br><span style="font-size: 80%;">90 a 31 días&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Dos noches de estancia.</span><br><span style="font-size: 80%;">30 días o menos&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cargo de todas las habitaciones.</span></p>
-                    <p style="text-align: left;"><span style="font-size: 80%;">Penalización de la estancia total:<br>Por habitaciones canceladas con menos de 30 noches antes de la llegada I No shows I Salidas anticipadas.</span></p>
-                    <p style="text-align: left;"><strong><span style="font-size: 85%;">Política de CANCELACION por COVID&nbsp;</span></strong><br><span style="font-size: 85%;">En caso de que las fronteras o aeropuertos cierren debido a la pandemia, o se declare cuarentena oficial se darán las siguientes opciones:&nbsp;</span><br><span style="font-size: 85%;">*Cambio de fecha sin penalidad alguna y respetando la tarifa otorgada.&nbsp;</span><br><span style="font-size: 85%;">*Reembolso, se procede con una cancelación mínima de 31 días antes de la llegada. Los reembolsos tardan entre 30 y 60 días.&nbsp;</span><br><span style="font-size: 85%;">*En caso de cancelar 30 días o menos se aplica un cargo administrativo de $5,000 pesos..</span></p>
-                    <p>&nbsp;</p>
-
-                    </div>
-                    
-                    <p style="text-align: center;"><span style="font-size: 110%;"><strong>PLAN TODO INCLUIDO</strong></span></p>
-                    <p style="text-align: left;"><strong><span style="font-size: 80%;">Paquete Superior</span></strong></p>
-                    <p style="text-align: left;"><span style="font-size: 80%;">Habitación con cama King Size o dos camas dobles, con balcón privado o terraza, aire acondicionado, baño privado, secador de pelo, espejo de baño, TV, teléfono, minibar, despertador, plancha con tabla de planchar y caja de seguridad.</span><br><span style="font-size: 80%;">Servicio completo de desayuno, almuerzo y cena estilo buffet.</span><br><span style="font-size: 80%;">Opción de cena en nuestros restaurantes a la carta Italiano ‘Botticelli’ ó Mexicano ” Terraza Grill “.</span><br><span style="font-size: 80%;">Snack bar, hora del té y heladería + 4 bares para consumir bebidas alcohólicas nacionales o sin alcohol.</span><br><span style="font-size: 80%;">Actividades diarias y entretenimiento nocturno</span><br><span style="font-size: 80%;">Club de niños, bicicletas, gimnasio, aeróbicos y clases de estiramiento.&nbsp;</span><br><span style="font-size: 80%;">Deportes acuáticos no motorizados</span></p>
-                    <p style="text-align: left;"><strong><span style="font-size: 80%;">Inclusiones del Paquete Premium</span></strong></p>
-                    <p style="text-align: left;"><span style="font-size: 80%;">Botella de vino en su habitación a su llegada.</span><br><span style="font-size: 80%;">Bebidas alcohólicas internacionales ofrecidas en todos nuestros bares.</span><br><span style="font-size: 80%;">Acceso a nuestro lounge bar privado ubicado en la playa.</span><br><span style="font-size: 80%;">Cafetera en la habitación.</span><br><span style="font-size: 80%;">Mejores amenidades de baño, incluyendo batas.</span><br><span style="font-size: 80%;">Minibar rellenado diariamente con cerveza y refrescos.</span><br><span style="font-size: 80%;">25% de descuento en todos los servicios de Spa en The Reef Spa.</span><br><span style="font-size: 80%;">Acceso a nuestro Hotel hermano The Reef Coco Beach con transportación incluida.</span></p>
-                            
-                    <style>
-                    #text-177576354 {
-                      text-align: center;
-                    }
-                    </style>
-                        </div>
-            </div>
+               Iglesia , Salon 
+          
         </div>
     </div>
     <div class="spacer s0"></div>
     <div id="parallax5" class="parallaxParent">
-      <div class="parallax-image " style="background-image: url(img/mapa_rivera_maya.jpg);"></div>
+      <div class="parallax-image " style="background-image: url(img//PyR3.jpeg);"></div>
 
   </div>
     <div id="agenda" class="spacer s1">
@@ -680,343 +382,12 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
           </div>
             
             <div class="row col-md-12">
-
-                  <!-- Card turismo1 -->
-                <div class="col-md-12 col-12 col-lg-2 agenda mb-1 offset-lg-1 offset-md-0 pointer" data-toggle="modal" data-target="#turismo1">
-                    <div class="card h-100  content"  >
-                        <div class="card-title"></div><h5 >Turismo</h5>
-                        <div class="card-body d-flex  flex-column ">
-                          <p class="card-text texto-resaltado"> <small>14 de septiembre</small></p>
-                          <p class="card-text text-wrap" style="overflow-y: auto;">Tour Chichén Itzá, Baño en cenote y Valladolid</p>
-                          <b>Adulto: $ 850  <br> Niño: $700 <br> (3-9 años)</b>
-                          <img class="card-img-bottom mt-auto p-2" src="img/chichen.jpg" alt="Card image cap">
-                        </div>
-                      </div>
+                <div class="card">
+                  <h2>Agradecemos su amable confirmaciín antes de <b>29 de Ocubre</b></h2>
+                  <label for="">Nombre</label>
+                  <input type="text">
+                  <input type="checkbox">
                 </div>
-                <!-- Modal turismo 1-->
-                <div class="modal fade agenda" id="turismo1" tabindex="-1" role="dialog" aria-labelledby="turismo1" aria-hidden="true">
-                  <div class="modal-dialog modal-xl " role="document">
-                    <div class="modal-content agenda">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Turismo  <small>14 de septiembre</small></h5>
-                        <button type="button" class="close btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <h2>DESCRIPCIÓN TOUR	</h2> 					
-						            <b>INCLUYE</b>
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <ul>
-                              <li>Transporte redondo	</li>
-                              <li>Comida buffet </li>
-                              <li> Tickets de entrada</li>
-                              <li> Visita guiada en Chichén Itzá</li>
-                              <li> Visita Hacienda Oxmán			</li>
-                              <li> Tiempo libre en la Zona Arqueológica			</li>
-                              <li>Visita Hacienda Oxmán			</li>
-                              <li> Visita al centro de Valadolid	</li>              			
-                        </div>
-                          <div  class="col-lg-8">
-                            Tu primer destino será Valladolid, la segunda ciudad más antigua del Estado de Yucatán, famosa por su artesanía y arquitectura colonia, luego de reccorer el centro histórico te adentrarás en la cultura maya visitando Chichén Itzá, una de sus obras arquitectónicas más importantes y considerada una de las nuevas siete maravillas del mundo. Posteriomente se dirigirá a la hermosa Hacienda Oxmán donde tendrá tiempo libre para nadar en el cenote de formación natural y al finalizar tendrá una deliciosa comida buffet con platillos típicos de la región.			
-                          </div>	
-                        </div>
-                        <br>
-                        <b>Precio por persona</b>		
-                        <div class="row">
-                          <div class="col-lg-6">
-                            Adulto		$850
-                            Niño            (3-9 años)		$700
-                            Infantes    (0-2 años)		GRATIS
-                          </div>		
-                          <div class="col-lg-6">
-                            Adulto (PROMO MEX.)**		$750
-                            Niño            (3-9 años)		$700
-                            Infantes    (0-2 años)		GRATIS
-                          </div>		
-                        </div>	
-                          <br>
-                      Tiempo aprox. 12 horas desde el pick up en Hotel The Reef Playacar						
-                      No incluye bebidas en el restaurante, Chalecos y gastos adicionales						
-                      ** Indispensable presentar INE o Pasaporte Mexicano para poder hacer válida la promoción. En caso de no presentarla, deberán pagar la diferencia tarifaria.						
-                                  <br>
-                      Tipo de cambio 			USD 20.00 MXP		EUR 21.00 MXP	
-                                  
-                        <br>
-                        <b>Recomendaciones:		</b> 				
-                      Llevar ropa fresca, calzado cómodo, gorra y/o sombrero y gafas de sol						
-                      Traje de baño, protector solar, toalla y un cambio de ropa.						
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                 <!-- Card turismo2 -->
-                <div class="col-md-12 col-12 col-lg-2  agenda mb-1 pointer"  data-toggle="modal" data-target="#turismo2">
-                    <div class="card h-100  content" >
-                        <h5 class="card-title">Turismo</h5>
-                        <div class="card-body d-flex   flex-column">
-                          <p class="card-text texto-resaltado"> <small>15 de septiembre</small></p>
-                          <p class="card-text text-wrap">Tulum, Cobá y Aldea Maya</p>
-                          <b>Adulto: $1,050 <br>  Niño: $900 <br> (3-9 años) </b>
-                          <img class="card-img-bottom mt-auto p-2" src="img/tulum (2).jpg" alt="Card image cap">
-                        </div>
-                      </div>
-                </div>
-                <!-- Modal turismo 2-->
-                <div class="modal fade agenda" id="turismo2" tabindex="-1" role="dialog" aria-labelledby="turismo1" aria-hidden="true">
-                  <div class="modal-dialog modal-xl " role="document">
-                    <div class="modal-content agenda">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Turismo  <small>15 de septiembre</small></h5>
-                        <button type="button" class="close btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <h2>DESCRIPCIÓN TOUR	</h2> 					
-                        <b>INCLUYE</b>
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <ul>
-                              <li>Transporte redondo				</li>
-                              <li>Visita la Z.A. de Cobá	 </li>
-                              <li> Visita la Z.A. de Tulum	</li>
-                              <li>Comida buffet (sin bebidas)		</li>
-                              <li>Visita a una Aldea Maya		</li>
-                              <li> Boletos de entrada + Guía				</li>
-                              <li> Visita playa Santa Fe				</li>
-                              <li>Visita a la escultura Madre Tierra				</li>
-                              <li> Tiepo libre en Zonas Arqueológicas	</li>              			
-                        </div>
-                          <div  class="col-lg-8">
-                            Para comenzar, se dirigirá a la Zona Arqueológica de Tulum, donde con la ayuda del guía podrá aprender información muy relevante sobre la cultura maya, y finalmente tendrá tiempo libre que podrá aprovechar para admirar la Zona Arqueológica. Terminando nos dirigiremos a la playa de Santa Fe, donde podrá disfrutar de su arena blanca y agua cristalina. Luego se dirigirá a la zona arqueológica de Cobá donde se encuentra la majestuosa pirámide de Nohoch Mul, con 42 metros de altura. Tendrá una visita guiada y tiempo libre. Al finalizar, se dirigirá al restaurante para degustar un delicioso almuerzo buffet y terminaremos con la visita a una Aldea Maya. De vuelta en Tulum nos detendremos para tomarnos fotografías en la escultura de la Madre Naturaleza, ícono del Tulum Moderno.			
-			                    </div>	
-                        </div>
-                        <br>
-                        <b>Precio por persona</b>		
-                        <div class="row">
-                          <div class="col-lg-6">
-                            Adulto		$1.050
-                            Niño           (3-9 años)		$900
-                            Infantes   (0-2 años)		GRATIS
-                          </div>		
-                          <div class="col-lg-6">
-     
-                          </div>		
-                        </div>	
-                          <br>
-                          Tiempo aprox. 11 horas desde el pick up en Hotel The Reef Playacar						
-                          No incluye bebidas en el restaurante y  gastos adicionales						
-                          Por contingencia no se puede subir a la pirámide Z.A. de Cobá		
-                          <br>				
-                          Tipo de cambio 			USD 20.00 MXP		EUR 21.00 MXP	
-                                  
-                        <br>
-                        <b>Recomendaciones:		</b> 				
-                        Llevar ropa fresca, calzado cómodo, gorra y/o sombrero y gafas de sol				
-                        Traje de baño, protector solar, toalla y un cambio de ropa.									
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Card actividad1 -->
-                <div class="col-md-12  col-12 col-lg-2 agenda mb-1 pointer" data-toggle="modal" data-target="#actividad1">
-                    <div class="card h-100  content" >
-                        <h5 class="card-title">Actividad</h5>
-                        <div class="card-body d-flex   flex-column">
-                          <p class="card-text texto-resaltado"> <small>17 de septiembre</small></p>
-                          <p class="card-text">Actividad organizada por los novios</p>
-                          <b>Más información próximamente</b>
-                          <img class="card-img-bottom mt-auto p-2" src="img/pregunta.png"  alt="Card image cap">
-                        </div>
-                      </div>
-                </div>
-                 <!-- Modal actividad1-->
-                 <div class="modal fade agenda" id="actividad1" tabindex="-1" role="dialog" aria-labelledby="turismo1" aria-hidden="true">
-                  <div class="modal-dialog modal-xl " role="document">
-                    <div class="modal-content agenda">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Actividad  <small>17 de septiembre</small></h5>
-                        <button type="button" class="close btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <h2>DESCRIPCIÓN ACTIVIDAD						</h2> 					
-                        <b>INCLUYE</b>
-                        <div class="row">
-                          <div class="col-lg-4">
-                            <ul>
-                              <li>Transporte redondo				</li>
-                              <li>Barra libre de bebidas nacionales			 </li>
-                              <li>Comida buffet 		</li>
-                              <li>Tiempo libre 			</li>
-           			
-                        </div>
-                          <div  class="col-lg-8">
-                            Actividad sorpresa organizada por parte de los anfitriones. 			
-                          </div>	
-                        </div>
-                        <br>
-                        <b>Precio por persona</b>		
-                        <div class="row">
-                          <div class="col-lg-6">
-                          					
-                  
-                          </div>		
-                          <div class="col-lg-6">
-     
-                          </div>		
-                        </div>	
-                          <br>
-                          Tiempo aprox. 11 horas desde el pick up en Hotel The Reef Playacar	
-                          <br>				
-                          Tipo de cambio 			USD 20.00 MXP		EUR 21.00 MXP	
-                                  
-                        <br>
-                        <b>Recomendaciones:		</b> 				
-                        Llevar ropa fresca, calzado cómodo, gorra y/o sombrero y gafas de sol				
-                        Traje de baño, protector solar, toalla y un cambio de ropa.											
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <!-- Card boda -->
-                <div class="col-md-12 col-12 col-lg-2 agenda mb-1 pointer"  data-toggle="modal" data-target="#boda">
-                    <div class="card h-100  content " style="border-color: lightcoral; " >
-                        <h5 class="card-title">Boda</h5>
-                        <div class="card-body d-flex  flex-column">
-                          <p class="card-text texto-resaltado"> <small>18 de septiembre</small></p>
-                          <p class="card-text">Nuestro día especial</p>
-                          <b></b>
-                          <img class="card-img-bottom mt-auto p-2" src="img/Save_the_date_Jordi_y_Mayra.png" alt="Card image cap">
-                        </div>
-                      </div>
-                </div>
-                 <!-- Modal boda-->
-                 <div class="modal fade agenda" id="boda" tabindex="-1" role="dialog" aria-labelledby="turismo1" aria-hidden="true">
-                  <div class="modal-dialog modal-xl " role="document">
-                    <div class="modal-content agenda">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Boda <small>18 de septiembre</small></h5>
-                        <button type="button" class="close btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <h2>Boda					</h2> 					
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th scope="col">Horarios</th>
-                              <th scope="col">Descripción				</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">14:45</th>
-                              <td>Ceremonia Religiosa en Parroquia de Nuestra Señora del Carmen</td>
-                               </tr>
-                            <tr>
-                              <th scope="row">16:30</th>
-                              <td>Llegada recien casados en  hotel The Reef Playacar			</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">17:00</th>
-                              <td>Inicio ceremonia en la playa	</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">18:00</th>
-                              <td>Coctel 		</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">19:30</th>
-                              <td>Inicio de cena		</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">1:00</th>
-                              <td>Termino de evento en la playa			</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">1:30</th>
-                              <td>FIN		</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <b>Recomendaciones:		</b> 				
-                        Mujeres	Vestido Largo	Telas Ligeras		NO Blanco, Rojo y Menta		
-                        Hombres	Pantalon con Guayabera y/o camisa			Colores claros NO Blanco		
-                        Calzado	Sandalias y/o zapatos comodos para la playa 															
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  <!-- Card tornaboda -->
-                <div class="col-md-12 col-12 col-lg-2 agenda mb-1 pointer" data-toggle="modal" data-target="#tornaboda">
-                    <div class="card h-100 21 content"  >
-                        <h5 class="card-title">Torna Boda</h5>
-                        <div class="card-body d-flex   flex-column ">
-                          <p class="card-text texto-resaltado"> <small>19 de septiembre</small></p>
-                          <p class="card-text">Actividad en el hotel</p>
-                          <b>Codigo de vestimenta: BLANCO</b>
-                          <img class="card-img-bottom  mt-auto p-2" src="img/playa.jpg" alt="Card image cap">
-                        </div>
-                      </div>
-                </div>
-                <!-- Modal tornaboda-->
-                <div class="modal fade agenda" id="tornaboda" tabindex="-1" role="dialog" aria-labelledby="tornaboda" aria-hidden="true">
-                  <div class="modal-dialog modal-xl " role="document">
-                    <div class="modal-content agenda">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Torna Boda <small>19 de septiembre</small></h5>
-                        <button type="button" class="close btn btn-outline-secondary " data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <h2>Torna Boda 					</h2> 					
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th scope="col">Horarios</th>
-                              <th scope="col">Descripción				</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <th scope="row">10:00</th>
-                              <td>Servicio de desayuno							</td>
-                               </tr>
-                            <tr>
-                              <th scope="row">14:00</th>
-                              <td>FIN		</td>
-                            </tr>
-                           
-                          </tbody>
-                        </table>
-                        <b>Requisitos		</b> 				
-                        Codigo de vestimenta: BLANCO																					
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>           
-
             </div>
             
         </div>
@@ -1025,13 +396,14 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     <br>
     <div>
       <div class="aviso col-lg-9 offset-lg-1 text-center">
-        *Se requiere confirmación de las actividades a realizar antes del 15 de agosto
+        *Algun texto extra
       </div>
     </div>
     <br><br><br>
 
-    <div class="spacer s1 text-center  col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6 offset-lg-3">
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+     <div class="spacer s1 text-center  col-12 col-sm-12 col-md-12 offset-md-0 col-lg-6 offset-lg-3">
+       <p>Manda tus videos, felicitacione y fotos a este correo <a href="mailto:salvadormmedel@gmail.com">salvadormmedel@gmail.com</a></p>
+    <!--  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -1109,9 +481,9 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
           <span class="sr-only texto-resaltado">Next</span>
         </a>
       </div>
-      <br>
-        <a class="texto-resaltado" href="https://www.facebook.com/salvadormejora" target="_blank">Copyright © 2020 Salvador Mejorada</a>
-    </div>
+      <br>-->
+        <a class="texto-resaltado" href="https://obnzrjzgvrsoz6xtdv7dmq-on.drv.tw/www.ivanmedel.com/" target="_blank">Copyright © 2021 Iván Medel</a>
+    </div> 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
@@ -1122,6 +494,8 @@ Somos dos viajeros que no buscaban nada y encontraron todo … Y es que cuando l
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 
     <script>
+       
+
         // init controller
         var controller = new ScrollMagic.Controller({removeIndicators: true, globalSceneOptions: {triggerHook: "onEnter", duration: "300%"}});
     </script>
